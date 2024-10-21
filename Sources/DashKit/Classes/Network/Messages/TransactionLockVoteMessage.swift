@@ -7,7 +7,7 @@
 import Foundation
 
 import BitcoinCore
-import WWExtensions
+import SWExtensions
 
 // MARK: - TransactionLockVoteMessage
 
@@ -32,7 +32,7 @@ struct TransactionLockVoteMessage: IMessage {
     // MARK: Computed Properties
 
     var description: String {
-        "\(txHash.ww.reversedHex)"
+        "\(txHash.sw.reversedHex)"
     }
 }
 

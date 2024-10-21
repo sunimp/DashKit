@@ -9,7 +9,7 @@ import Foundation
 import BigInt
 import BitcoinCore
 import HDWalletKit
-import WWToolKit
+import SWToolKit
 
 // MARK: - Kit
 
@@ -396,7 +396,7 @@ public class Kit: AbstractKit {
 extension Kit: BitcoinCoreDelegate {
     public func transactionsUpdated(inserted: [TransactionInfo], updated: [TransactionInfo]) {
         // check for all new transactions if it's has instant lock
-        for item in inserted.compactMap(\.transactionHash.ww.hexData) {
+        for item in inserted.compactMap(\.transactionHash.sw.hexData) {
             instantSend?.handle(insertedTxHash: item)
         }
 

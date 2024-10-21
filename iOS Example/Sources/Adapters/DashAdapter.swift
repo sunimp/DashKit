@@ -3,7 +3,7 @@ import Combine
 import DashKit
 import Foundation
 import HDWalletKit
-import WWToolKit
+import SWToolKit
 
 class DashAdapter: BaseAdapter {
     override var feeRate: Int { 1 }

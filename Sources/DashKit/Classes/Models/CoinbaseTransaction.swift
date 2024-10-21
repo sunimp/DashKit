@@ -7,7 +7,7 @@
 import Foundation
 
 import BitcoinCore
-import WWExtensions
+import SWExtensions
 
 struct CoinbaseTransaction {
     // MARK: Properties

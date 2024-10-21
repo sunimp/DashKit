@@ -7,7 +7,7 @@
 import Foundation
 
 import BitcoinCore
-import WWCryptoKit
+import SWCryptoKit
 
 class SingleHasher: IDashHasher {
     func hash(data: Data) -> Data {

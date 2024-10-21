@@ -7,7 +7,7 @@
 import Foundation
 
 import BitcoinCore
-import WWExtensions
+import SWExtensions
 
 class ISLockParser: IMessageParser {
     // MARK: Properties

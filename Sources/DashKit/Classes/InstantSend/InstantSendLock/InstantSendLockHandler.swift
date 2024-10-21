@@ -7,7 +7,7 @@
 import Foundation
 
 import BitcoinCore
-import WWToolKit
+import SWToolKit
 
 class InstantSendLockHandler: IInstantSendLockHandler {
     // MARK: Properties

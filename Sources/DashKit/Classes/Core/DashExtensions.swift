@@ -6,7 +6,13 @@
 
 import Foundation
 
-extension Data: Comparable {
+#if compiler(>=6)
+extension Data: @retroactive Comparable { }
+#else
+extension Data: Comparable { }
+#endif
+
+extension Data {
     public static func < (lhs: Data, rhs: Data) -> Bool {
         guard lhs.count == rhs.count else {
             return lhs.count < rhs.count

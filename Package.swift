@@ -16,27 +16,27 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/attaswift/BigInt.git", from: "5.4.1"),
-        .package(url: "https://github.com/groue/GRDB.swift.git", .upToNextMajor(from: "6.29.2")),
-        .package(url: "https://github.com/sunimp/BitcoinCore.Swift.git", .upToNextMajor(from: "3.2.0")),
-        .package(url: "https://github.com/sunimp/DashCrypto.Swift.git", .upToNextMajor(from: "1.1.0")),
-        .package(url: "https://github.com/sunimp/HDWalletKit.Swift.git", .upToNextMajor(from: "1.4.0")),
-        .package(url: "https://github.com/sunimp/WWCryptoKit.Swift.git", .upToNextMajor(from: "1.4.0")),
-        .package(url: "https://github.com/sunimp/WWToolKit.Swift.git", .upToNextMajor(from: "2.2.0")),
-        .package(url: "https://github.com/sunimp/WWExtensions.Swift.git", .upToNextMajor(from: "1.2.0")),
-        .package(url: "https://github.com/nicklockwood/SwiftFormat.git", from: "0.54.3"),
+        .package(url: "https://github.com/groue/GRDB.swift.git", .upToNextMajor(from: "6.29.3")),
+        .package(url: "https://github.com/sunimp/BitcoinCore.git", .upToNextMajor(from: "1.0.0")),
+        .package(url: "https://github.com/sunimp/DashCrypto.git", .upToNextMajor(from: "1.0.0")),
+        .package(url: "https://github.com/sunimp/HDWalletKit.git", .upToNextMajor(from: "1.0.0")),
+        .package(url: "https://github.com/sunimp/SWCryptoKit.git", .upToNextMajor(from: "1.0.0")),
+        .package(url: "https://github.com/sunimp/SWToolKit.git", .upToNextMajor(from: "1.0.0")),
+        .package(url: "https://github.com/sunimp/SWExtensions.git", .upToNextMajor(from: "1.0.0")),
+        .package(url: "https://github.com/nicklockwood/SwiftFormat.git", from: "0.54.6"),
     ],
     targets: [
         .target(
             name: "DashKit",
             dependencies: [
                 "BigInt",
+                "BitcoinCore",
+                "DashCrypto",
+                "HDWalletKit",
+                "SWCryptoKit",
+                "SWExtensions",
+                "SWToolKit",
                 .product(name: "GRDB", package: "GRDB.swift"),
-                .product(name: "BitcoinCore", package: "BitcoinCore.Swift"),
-                .product(name: "DashCrypto", package: "DashCrypto.Swift"),
-                .product(name: "WWCryptoKit", package: "WWCryptoKit.Swift"),
-                .product(name: "WWExtensions", package: "WWExtensions.Swift"),
-                .product(name: "WWToolKit", package: "WWToolKit.Swift"),
-                .product(name: "HDWalletKit", package: "HDWalletKit.Swift")
             ]
         ),
     ]

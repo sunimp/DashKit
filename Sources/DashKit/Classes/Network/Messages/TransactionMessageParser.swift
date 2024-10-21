@@ -7,8 +7,8 @@
 import Foundation
 
 import BitcoinCore
-import WWCryptoKit
-import WWExtensions
+import SWCryptoKit
+import SWExtensions
 
 // MARK: - TransactionMessageParser
 

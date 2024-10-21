@@ -7,7 +7,7 @@
 import Foundation
 
 import BitcoinCore
-import WWToolKit
+import SWToolKit
 
 class TransactionLockVoteHandler: ITransactionLockVoteHandler {
     // MARK: Properties

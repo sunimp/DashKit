@@ -3,15 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2FA5D47CFAEB8DB143F27645 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA5DACF4DE83AC5FE512D28 /* Extensions.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		6B7C7E6628EC02540053F11A /* DashKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6B7C7E6528EC02540053F11A /* DashKit */; };
 		6BADE51A1F50100CE1EA2E77 /* libPods-DashKitTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68064D100A6B89360F422ACD /* libPods-DashKitTests.a */; };
 		A40806002C75F354003947F1 /* UIExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = A40805FF2C75F354003947F1 /* UIExtensions */; };
+		A40F65A72CC64FF1008E6CF7 /* DashKit in Frameworks */ = {isa = PBXBuildFile; productRef = A40F65A62CC64FF1008E6CF7 /* DashKit */; };
 		D36AAA9623A2125D0065B32B /* DashAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36AAA7D23A2125D0065B32B /* DashAdapter.swift */; };
 		D36AAA9823A2125E0065B32B /* BaseAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36AAA7F23A2125D0065B32B /* BaseAdapter.swift */; };
 		D36AAA9923A2125E0065B32B /* SendController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D36AAA8123A2125D0065B32B /* SendController.xib */; };
@@ -55,7 +55,7 @@
 /* Begin PBXFileReference section */
 		2FA5DACF4DE83AC5FE512D28 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		5F2017BF6B8CE56A1B7B7DF7 /* libPods-BitcoinCoreTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BitcoinCoreTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		607FACD01AFB9204008FA782 /* DashKit Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DashKit Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACD01AFB9204008FA782 /* DashKit-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DashKit-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61760DF10CCBAC95608DF73F /* libPods-BitcoinKitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BitcoinKitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,7 +115,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A40806002C75F354003947F1 /* UIExtensions in Frameworks */,
-				6B7C7E6628EC02540053F11A /* DashKit in Frameworks */,
+				A40F65A72CC64FF1008E6CF7 /* DashKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,7 +156,7 @@
 		607FACD11AFB9204008FA782 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD01AFB9204008FA782 /* DashKit Demo.app */,
+				607FACD01AFB9204008FA782 /* DashKit-Example.app */,
 				D39EA3B723A1240C00FF23B7 /* DashKitTests.xctest */,
 			);
 			name = Products;
@@ -343,11 +343,11 @@
 			);
 			name = "iOS Example";
 			packageProductDependencies = (
-				6B7C7E6528EC02540053F11A /* DashKit */,
 				A40805FF2C75F354003947F1 /* UIExtensions */,
+				A40F65A62CC64FF1008E6CF7 /* DashKit */,
 			);
 			productName = DashKit;
-			productReference = 607FACD01AFB9204008FA782 /* DashKit Demo.app */;
+			productReference = 607FACD01AFB9204008FA782 /* DashKit-Example.app */;
 			productType = "com.apple.product-type.application";
 		};
 		D39EA3AA23A1240C00FF23B7 /* DashKitTests */ = {
@@ -378,7 +378,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1600;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
@@ -402,7 +402,8 @@
 			);
 			mainGroup = 607FACC71AFB9204008FA782;
 			packageReferences = (
-				A40805FE2C75F354003947F1 /* XCRemoteSwiftPackageReference "UIExtensions.Swift" */,
+				A40805FE2C75F354003947F1 /* XCRemoteSwiftPackageReference "UIExtensions" */,
+				A40F65A52CC646AF008E6CF7 /* XCLocalSwiftPackageReference "../../DashKit" */,
 			);
 			productRefGroup = 607FACD11AFB9204008FA782 /* Products */;
 			projectDirPath = "";
@@ -632,7 +633,7 @@
 				);
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sunimp.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "DashKit Demo";
+				PRODUCT_NAME = "DashKit-Example";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 			};
@@ -650,7 +651,7 @@
 				);
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sunimp.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "DashKit Demo";
+				PRODUCT_NAME = "DashKit-Example";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 			};
@@ -737,26 +738,34 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		A40F65A52CC646AF008E6CF7 /* XCLocalSwiftPackageReference "../../DashKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../DashKit;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
-		A40805FE2C75F354003947F1 /* XCRemoteSwiftPackageReference "UIExtensions.Swift" */ = {
+		A40805FE2C75F354003947F1 /* XCRemoteSwiftPackageReference "UIExtensions" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sunimp/UIExtensions.Swift.git";
+			repositoryURL = "https://github.com/sunimp/UIExtensions.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.3.0;
+				minimumVersion = 1.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		6B7C7E6528EC02540053F11A /* DashKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = DashKit;
-		};
 		A40805FF2C75F354003947F1 /* UIExtensions */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A40805FE2C75F354003947F1 /* XCRemoteSwiftPackageReference "UIExtensions.Swift" */;
+			package = A40805FE2C75F354003947F1 /* XCRemoteSwiftPackageReference "UIExtensions" */;
 			productName = UIExtensions;
+		};
+		A40F65A62CC64FF1008E6CF7 /* DashKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A40F65A52CC646AF008E6CF7 /* XCLocalSwiftPackageReference "../../DashKit" */;
+			productName = DashKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

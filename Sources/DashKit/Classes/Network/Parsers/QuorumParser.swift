@@ -7,8 +7,8 @@
 import Foundation
 
 import BitcoinCore
-import WWCryptoKit
-import WWExtensions
+import SWCryptoKit
+import SWExtensions
 
 class QuorumParser: IQuorumParser {
     // MARK: Properties
@@ -25,7 +25,7 @@ class QuorumParser: IQuorumParser {
 
     func parse(byteStream: ByteStream) -> Quorum {
         let versionData = byteStream.read(Data.self, count: 2)
-        let version = versionData.ww.to(type: UInt16.self).littleEndian
+        let version = versionData.sw.to(type: UInt16.self).littleEndian
 
         let typeWithQuorumHash = byteStream.read(Data.self, count: 33)
         let type = typeWithQuorumHash[0]
@@ -35,7 +35,7 @@ class QuorumParser: IQuorumParser {
         var quorumIndex: UInt16?
         if version == 2 || version == 4 { // read v2 quorumIndex
             let indexData = byteStream.read(Data.self, count: 2)
-            quorumIndex = indexData.ww.to(type: UInt16.self).littleEndian
+            quorumIndex = indexData.sw.to(type: UInt16.self).littleEndian
             quorumIndexData = indexData
         }
 
